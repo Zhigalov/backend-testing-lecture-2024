@@ -30,6 +30,7 @@ add_library(${PROJECT_NAME}_objs OBJECT
     src/hello.cpp
     src/example_01/sum.hpp
     src/example_01/sum.cpp
+    src/example_02/pluralize.hpp
 )
 target_link_libraries(${PROJECT_NAME}_objs PUBLIC userver::postgresql)
 
@@ -41,8 +42,7 @@ target_link_libraries(${PROJECT_NAME} PRIVATE ${PROJECT_NAME}_objs)
 
 # Unit Tests
 add_executable(${PROJECT_NAME}_unittest
-    src/hello_test.cpp
-    src/example_01/sum_test.cpp
+    src/example_02/pluralize_test.cpp
 )
 target_link_libraries(${PROJECT_NAME}_unittest PRIVATE ${PROJECT_NAME}_objs userver::utest)
 add_google_tests(${PROJECT_NAME}_unittest)
