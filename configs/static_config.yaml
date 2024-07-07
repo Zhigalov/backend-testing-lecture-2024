@@ -55,6 +55,12 @@ components_manager:
             method: POST                  # It will only reply to POST requests.
             task_processor: main-task-processor  # Run it on CPU bound task processor
 
+        handler-calculate:
+            path: /v1/calculate
+            method: POST
+            task_processor: main-task-processor
+            delivery-url: https://dostavka.yandex.ru/api/b2b/external/phoenix/dcaa/cargo/v2/offers/calculate?country=rus
+
         postgres-db-1:
             dbconnection: $dbconnection
             blocking_task_processor: fs-task-processor

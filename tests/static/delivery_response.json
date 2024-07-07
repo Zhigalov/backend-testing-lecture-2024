@@ -1,0 +1,32 @@
+{
+  "claims_offers": [
+    {
+      "payload": "mock_payload_000",
+      "tariff_info": {
+        "title": "Экспресс",
+        "tariff": "express_d2d",
+        "vertical": "express",
+        "surge_limit": "99"
+      },
+      "price": {
+        "total_price": "356",
+        "total_price_with_vat": "427.2",
+        "currency": "RUB",
+        "surge_level": "moderate",
+        "surge_ratio": "1.924324"
+      },
+      "visiting_intervals": [
+        {
+          "type": "strict_match",
+          "from": "2024-06-20T16:29:51.033955+00:00",
+          "to": "2024-06-20T16:42:46.033955+00:00"
+        },
+        {
+          "type": "strict_match",
+          "from": "2024-06-20T16:29:51.033955+00:00",
+          "to": "2024-06-20T17:04:25.033955+00:00"
+        }
+      ]
+    }
+  ]
+}

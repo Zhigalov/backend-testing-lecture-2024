@@ -32,6 +32,8 @@ add_library(${PROJECT_NAME}_objs OBJECT
     src/example_01/sum.cpp
     src/example_02/pluralize.hpp
     src/example_02/pluralize.cpp
+    src/example_03/calculate.hpp
+    src/example_03/calculate.cpp
 )
 target_link_libraries(${PROJECT_NAME}_objs PUBLIC userver::postgresql)
 

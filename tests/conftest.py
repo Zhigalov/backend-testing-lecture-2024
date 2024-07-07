@@ -5,7 +5,20 @@ import pytest
 from testsuite.databases.pgsql import discover
 
 
-pytest_plugins = ['pytest_userver.plugins.postgresql']
+pytest_plugins = [
+    'pytest_userver.plugins.postgresql',
+    'pytest_userver.plugins.core'
+]
+
+USERVER_CONFIG_HOOKS = ['userver_config_calculate']
+
+
+@pytest.fixture(scope='session')
+def userver_config_calculate(mockserver_info):
+    def do_patch(config_yaml, config_vars):
+        config_yaml['components_manager']['components']['handler-calculate']['delivery-url'] = mockserver_info.url('delivery/calculate')
+
+    return do_patch
 
 
 @pytest.fixture(scope='session')
