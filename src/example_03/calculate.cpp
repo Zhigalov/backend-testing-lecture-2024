@@ -126,4 +126,8 @@ curl 'https://dostavka.yandex.ru/api/b2b/external/phoenix/dcaa/cargo/v2/offers/c
   --data-raw '{"payment_info":{},"items":[{"quantity":1}],"route_points":[{"lon":60.62944549875555,"lat":56.84342722610512},{"lon":60.59110540242933,"lat":56.83548550031163}]}' | jq .
 */
 
+/**
+curl 'http://localhost:8080/v1/calculate?a_lat=56.843427&a_lon=60.629445&b_lat=56.835485&b_lon=60.591105' -d ''
+*/
+
 }  // namespace testing_lecture::example_03
